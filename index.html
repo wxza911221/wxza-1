@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登錄和註冊</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container" id="loginContainer">
+        <h2>登錄</h2>
+        <form id="loginForm">
+            <label for="username">用戶名：</label>
+            <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="只允許英文和數字" placeholder="請輸入用戶名" required>
+
+            <label for="password">密碼：</label>
+            <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]+" title="只允許英文和數字" placeholder="請輸入密碼" required>
+
+            <button type="submit">登錄</button>
+        </form>
+        
+        <p>還沒有帳號？<a href="#" id="registerLink">註冊</a></p>
+    </div>
+
+    <div class="container" id="registerContainer" style="display: none;">
+        <h2>註冊</h2>
+        <form id="registerForm">
+            <label for="newUsername">新用戶名：</label>
+            <input type="text" id="newUsername" name="newUsername" pattern="[a-zA-Z0-9]+" title="只允許英文和數字" placeholder="請輸入新用戶名" required>
+
+            <label for="newPassword">新密碼：</label>
+            <input type="password" id="newPassword" name="newPassword" pattern="[a-zA-Z0-9]+" title="只允許英文和數字" placeholder="請輸入新密碼" required>
+
+            <button type="submit">註冊</button>
+        </form>
+        
+        <p>已經有帳號？<a href="#" id="loginLink">返回登錄</a></p>
+    </div>
+
+    <div class="container" id="loggedInContainer" style="display: none;">
+        <h2>功能區域</h2>
+        <ul>
+            <li><a href="#" id="monitoringLink">監測記錄</a></li>
+            <li><a href="#" id="mapLink">地圖</a></li>
+            <li><a href="#" id="robotLocationLink">機器人現在的位置</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
