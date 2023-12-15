@@ -14,9 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const registerContainer = document.getElementById('registerContainer');
     const loggedInContainer = document.getElementById('loggedInContainer');
 
-    // 連結到地圖、機器人位置、和感測器數據的連結
-    const mapLink = document.getElementById('mapLink');
-    const robotLocationLink = document.getElementById('robotLocationLink');
+    // 連結到地圖與機器人位置、和感測器數據的連結
+    const mapAndRobotLocationLink = document.getElementById('mapAndRobotLocationLink');
     const sensorDataLink = document.getElementById('sensorDataLink');
 
     // 模擬登錄操作
@@ -63,16 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
         simulateRegister();
     });
 
-    // 點擊地圖連結
-    mapLink.addEventListener('click', function (event) {
+    // 點擊地圖與機器人位置連結
+    mapAndRobotLocationLink.addEventListener('click', function (event) {
         event.preventDefault();
-        console.log('進入地圖');
-    });
-
-    // 點擊機器人位置連結
-    robotLocationLink.addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log('進入機器人現在的位置');
+        console.log('進入地圖與機器人現在位置');
     });
 
     // 點擊感測器數據連結
